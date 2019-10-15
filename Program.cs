@@ -13,7 +13,9 @@ namespace DataStructuresPart2
             bTree.Insert(6);
             bTree.Insert(4);
             bTree.Insert(3);
-            Console.WriteLine();
+            bTree.Insert(7);
+            bTree.Insert(9);
+            Console.WriteLine(bTree.Find(10));
         }
     }
 }

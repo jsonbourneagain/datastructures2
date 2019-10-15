@@ -55,5 +55,22 @@ namespace DataStructuresPart2.BinaryTree
 
             count++;
         }
+        public bool Find(int value)
+        {
+            var current = root;
+
+            while (current != null)
+            {
+                if (value == current.value)
+                    return true;
+                else if (value > current.value && current.rightChild != null)
+                    current = current.rightChild;
+                else if (value < current.value && current.leftChild != null)
+                    current = current.leftChild;
+                else
+                    break;
+            }
+            return false;
+        }
     }
 }
