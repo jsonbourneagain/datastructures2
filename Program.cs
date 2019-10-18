@@ -15,7 +15,10 @@ namespace DataStructuresPart2
             bTree.Insert(3);
             bTree.Insert(7);
             bTree.Insert(9);
-            Console.WriteLine(bTree.Find(10));
+            bTree.InOrderTraversal();
+            bTree.PreOrderTraversal();
+            bTree.PostOrderTraversal();
+            //Console.WriteLine(bTree.Find(10));
         }
     }
 }

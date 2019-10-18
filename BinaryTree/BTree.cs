@@ -72,5 +72,42 @@ namespace DataStructuresPart2.BinaryTree
             }
             return false;
         }
+        public void InOrderTraversal()
+        {
+            InOrderTraversal(root);
+        }
+        public void PreOrderTraversal()
+        {
+            PreOrderTraversal(root);
+        }
+        public void PostOrderTraversal()
+        {
+            PostOrderTraversal(root);
+        }
+        private void InOrderTraversal(Node root)
+        {
+            if (root == null)
+                return;
+            InOrderTraversal(root.leftChild);
+            Console.WriteLine(root.value);
+            InOrderTraversal(root.rightChild);
+        }
+        private void PreOrderTraversal(Node root)
+        {
+            if (root == null)
+                return;
+            Console.WriteLine(root.value);
+            PreOrderTraversal(root.leftChild);
+            PreOrderTraversal(root.rightChild);
+        }
+        private void PostOrderTraversal(Node root)
+        {
+            if (root == null)
+                return;
+            PreOrderTraversal(root.leftChild);
+            PreOrderTraversal(root.rightChild);
+            Console.WriteLine(root.value);
+        }
+
     }
 }
