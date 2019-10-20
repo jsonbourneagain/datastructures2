@@ -108,6 +108,18 @@ namespace DataStructuresPart2.BinaryTree
             PreOrderTraversal(root.rightChild);
             Console.WriteLine(root.value);
         }
+        public int Height()
+        {
+            return Height(root);
+        }
+        private int Height(Node root)
+        {
+            if (root == null)
+                return -1;
+            if (root.leftChild == null && root.rightChild == null)
+                return 0;
+            return 1 + Math.Max(Height(root.leftChild), Height(root.rightChild));
+        }
 
     }
 }
